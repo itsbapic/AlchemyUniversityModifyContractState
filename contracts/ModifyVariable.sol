@@ -3,17 +3,19 @@ pragma solidity ^0.8.4;
 
 contract ModifyVariable {
   uint public x;
+  string public randomString;
 
-  constructor(uint _x) {
+  constructor(uint _x, string memory _randomString) {
     x = _x;
+    randomString = _randomString;
   }
 
-  function modifyToLeet() public {
-    x = 1337;
-  }
-
-  function makeThisWork() public {
+  function modifyToTenThousand() public {
     x = 10000;
+  }
+
+  function modifyString() public {
+    randomString = "Holy moly this is a different string!";
   }
 
 }
